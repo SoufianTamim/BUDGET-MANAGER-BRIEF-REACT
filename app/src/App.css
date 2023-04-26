@@ -1,28 +1,36 @@
-.select-editable {
-    position:relative;
-    background-color:white;
-    border:solid grey 1px;
-    width:120px;
-    height:18px;
+
+#container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 50%;
+    height: 80vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #container-form > * {
+    margin-bottom: 20px;
+  }
+  
+  #container-form > :last-child {
+    margin-bottom: 0;
+  }
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input  {
+    /* padding: 12px 13rem !important;  */
+    /* width: 23rem; */
 }
-.select-editable select {
-    position:absolute;
-    top:0px;
-    left:0px;
-    font-size:14px;
-    border:none;
-    width:120px;
-    margin:0;
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 12px 12px !important; 
 }
-.select-editable input {
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100px;
-    padding:1px;
-    font-size:12px;
-    border:none;
+.css-xn6ruc > :not(style) {
+    width: 30rem !important;
 }
-.select-editable select:focus, .select-editable input:focus {
-    outline:none;
+.css-q8hpuo-MuiFormControl-root {
+  width: 480px !important;
 }

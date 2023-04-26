@@ -1,27 +1,30 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
+import React, { useState } from 'react';
+import EditableSelect from './EditableSelect';
+import { SimpleSelect } from './EditableSelect';
+import Button from './Button';
+import BasicTextFields from './InputField';
 
-export default function AddButton() {
+export default function Form() {
+  const [showForm, setShowForm] = useState(true);
+  
+    const toggleForm = () => {
+      console.log("toggle found")
+      setShowForm(!showForm);
+    };
+
   return (
-      <Button variant="contained" color="success">
-        Add a Depense / Revenue
-      </Button>
+    <div>
+      <Button  ButtonName="ShowForm" onclick={toggleForm} />
+      {showForm && (
+        <div id="container-form">
+          <EditableSelect />
+          <SimpleSelect />
+          <BasicTextFields name="Date" type="date" />
+          <BasicTextFields name="Motif" type="text" />
+          <BasicTextFields name="Price" type="number" />
+          <Button type="button" ButtonName="ADD" />
+        </div>
+      )}
+    </div>
   );
 }
-
-
-export function Select() {
-  // const js =  () => "this.nextElementSibling.value=this.value";
-    return (
-<div className="select-editable">
-  <select onChange={this.nextElementSibling.value = this.value}>
-    <option value="" />
-    <option value="115x175 mm">115x175 mm</option>
-    <option value="120x160 mm">120x160 mm</option>
-    <option value="120x287 mm">120x287 mm</option>
-  </select>
-  <input type="text" id='test' name="format" defaultValue="" />
-</div>
-
-    );
-  }
