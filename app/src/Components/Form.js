@@ -2,27 +2,25 @@ import React, { useState } from 'react';
 import EditableSelect from './EditableSelect';
 import { SimpleSelect } from './EditableSelect';
 import Button from './Button';
-import BasicTextFields from './InputField';
+import BasicTextField from './InputField';
 
 export default function Form() {
-  const [showForm, setShowForm] = useState(true);
-  
+  const [showForm, setShowForm] = useState(false);
     const toggleForm = () => {
-      console.log("toggle found")
       setShowForm(!showForm);
     };
 
   return (
     <div>
-      <Button  ButtonName="ShowForm" onclick={toggleForm} />
+      <button onClick={toggleForm}>{showForm ? "HIDE FORM" : "ADD A DEP/REV"}</button>
       {showForm && (
         <div id="container-form">
           <EditableSelect />
           <SimpleSelect />
-          <BasicTextFields name="Date" type="date" />
-          <BasicTextFields name="Motif" type="text" />
-          <BasicTextFields name="Price" type="number" />
-          <Button type="button" ButtonName="ADD" />
+          <BasicTextField type="date" />
+          <BasicTextField name="Motif" type="text" />
+          <BasicTextField name="Price" type="number" />
+          <Button id="btn-form" type="button" ButtonName="ADD" />
         </div>
       )}
     </div>

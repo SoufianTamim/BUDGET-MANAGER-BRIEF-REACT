@@ -80,8 +80,8 @@ export default function EditableSelect() {
           </Select>
         </FormControl>
         {editingOther && (
-          <div>
-            <TextField type="text" value={newOptionValue} onChange={handleNewOptionChange} />
+          <div id="grp-select">
+            <TextField id="select-edit" type="text" value={newOptionValue} onChange={handleNewOptionChange} />
             <Button type="submit" ButtonName="ADD"/>
           </div>
         )}
