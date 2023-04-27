@@ -68,7 +68,7 @@ export default function EditableSelect() {
 
   return (
     <Box>
-      <form onSubmit={handleNewOptionSubmit}>
+      <div onSubmit={handleNewOptionSubmit}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select labelId="demo-simple-select-label"
@@ -85,7 +85,7 @@ export default function EditableSelect() {
             <Button type="submit" ButtonName="ADD"/>
           </div>
         )}
-      </form>
+      </div>
     </Box>
   );
 }

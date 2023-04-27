@@ -12,16 +12,16 @@ export default function Form() {
 
   return (
     <div>
-      <button onClick={toggleForm}>{showForm ? "HIDE FORM" : "ADD A DEP/REV"}</button>
+      <button onClick={toggleForm} id="btn">{showForm ? "HIDE FORM" : "ADD A DEP/REV"}</button>
       {showForm && (
-        <div id="container-form">
+        <form id="container-form">
           <EditableSelect />
           <SimpleSelect />
-          <BasicTextField type="date" />
+          <BasicTextField name="Date" type="date" />
           <BasicTextField name="Motif" type="text" />
           <BasicTextField name="Price" type="number" />
           <Button id="btn-form" type="button" ButtonName="ADD" />
-        </div>
+        </form>
       )}
     </div>
   );
