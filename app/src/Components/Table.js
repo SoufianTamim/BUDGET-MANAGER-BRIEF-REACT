@@ -7,19 +7,18 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(category, type, date, motif, price) {
-  return { category, type, date, motif, price};
-}
 
-const rows = [
-  createData('na12345', 'haha', 'hoho', 'hihi','hoha' ),
-  createData('na1234', 'haha', 'hoho', 'hihi','hoha' ),
-  createData('na123', 'haha', 'hoho', 'hihi','hoha' ),
-  createData('na12', 'haha', 'hoho', 'hihi','hoha' ),
-  createData('na1', 'haha', 'hoho', 'hihi','hoha' ),
-];
 
-export default function BasicTable() {
+
+export default function BasicTable({formData}) {
+
+  function getRowStyle(type) {
+    return {
+      color: type === "Revenue" ? "green" : "red"
+
+    };
+  }
+
   return (
     <TableContainer component={Paper} id="Table-Container">
       <h1 > YOUR OPERATIONS </h1>
@@ -34,15 +33,17 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow  key={row.category} sx={{ '&:last-child td, &:last-child th': { border: 0 } }} >
-              <TableCell>{row.category}</TableCell>
-              <TableCell>{row.type}</TableCell>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.motif}</TableCell>
-              <TableCell>{row.price}</TableCell>
+      
+          {formData.map((formData,index) => (
+            <TableRow  key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableCell style={getRowStyle(formData.type)} >{formData.category}</TableCell>
+              <TableCell style={getRowStyle(formData.type)} >{formData.type}</TableCell>
+              <TableCell style={getRowStyle(formData.type)} >{formData.date}</TableCell>
+              <TableCell style={getRowStyle(formData.type)} >{formData.motif}</TableCell>
+              <TableCell style={getRowStyle(formData.type)} >{formData.price}</TableCell>
             </TableRow>
           ))}
+          
         </TableBody>
       </Table>
     </TableContainer>
