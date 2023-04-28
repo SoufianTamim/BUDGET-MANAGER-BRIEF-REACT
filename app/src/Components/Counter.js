@@ -1,7 +1,7 @@
 export default function Counter({ Total, Revenue, Depense  }) {
   
     const cards = [
-      { CardName: 'Total', CardContent: Total },
+      { CardName: 'Total', CardContent: Total = Revenue - Depense },
       { CardName: 'Revenue', CardContent: Revenue, Style: { color: "green" } },
       { CardName: 'Depense', CardContent: Depense, Style: { color: "red" } },
     ];
