@@ -11,23 +11,17 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#ResponsiveContainer{
-
-
-}
 #container-form > * {
   margin-bottom: 20px;
 }
 
-#card-container{
+#card-container {
   display: flex;
   justify-content: center;
-
 }
-#btn{
-
+#btn {
   display: block;
-margin: 40px auto;
+  margin: 40px auto;
 }
 
 .card {
@@ -41,7 +35,7 @@ margin: 40px auto;
   text-align: center;
   padding-bottom: 23px;
 }
-.card p{
+.card p {
   padding-bottom: 18.5;
 }
 
@@ -49,35 +43,30 @@ margin: 40px auto;
   margin-bottom: 0;
 }
 
-
-#Table-Container{
+#Table-Container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 50px auto;
-  width: 50%;
+  width: 80%;
   height: fit-content !important;
   padding: 70px 20px !important;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-
 }
-#Type{
+#Type {
   margin-top: 40px;
   min-width: 30rem;
   padding: 14px 20px 15px 10px;
   border-radius: 5px;
-  background:none ;
+  background: none;
   border: none;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
 }
 
-
-.select-editable {    
+.select-editable {
   position: relative;
   background-color: white;
   border: none;
@@ -86,40 +75,37 @@ margin: 40px auto;
   margin-bottom: 80px;
 }
 .select-editable select {
-  position:absolute;
-  top:0px; left:0px; 
-  font-size:14px; 
-  border:none; 
-  width:30rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 14px;
+  border: none;
+  width: 30rem;
   padding: 12px;
   padding: 13px 12px 13px 0;
-  margin:0;
+  margin: 0;
   border-radius: 5px;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-      background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 .select-editable input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 28rem;
-    padding: 1px;
-    padding: 15px 0 13px 11px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f5f5f5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 28rem;
+  padding: 1px;
+  padding: 15px 0 13px 11px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
 }
 
-
-.select-editable select:focus, .select-editable input:focus { outline:none;}
-
-
-
-
-
+.select-editable select:focus,
+.select-editable input:focus {
+  outline: none;
+}
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-
   padding: 12px 12px !important;
 }
 .css-xn6ruc > :not(style) {
@@ -127,11 +113,6 @@ margin: 40px auto;
 }
 .css-q8hpuo-MuiFormControl-root {
   width: 480px !important;
-}
-
-#select-cat{
-
-
 }
 
 button {
@@ -157,16 +138,4 @@ button {
   color: #fff;
   background-color: #2e7d32;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-}
-#btn-form {
-  min-width: 30rem !important;
-}
-#select-edit {
-  width: 23.9rem !important;
-}
-#grp-select {
-  margin-top: 23px;
-}
-#add-dep {
-  width: 100rem;
 }
